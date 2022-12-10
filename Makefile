@@ -7,8 +7,12 @@ SRCS=push_swap.c \
 	./utils/ft_lstdelone.c \
 	./utils/ft_lstlast.c \
 	./utils/ft_lstnew.c \
+	./utils/ft_lstsize.c \
+	./utils/ft_update_head_stack.c \
 	./utils/ft_free.c \
-	./utils/ft_lstsize.c
+	./utils/ft_strlen.c \
+	./utils/ft_pintables.c \
+	./operations/swap.c
 
 OBJS=$(SRCS:.c=.o)
 CC=cc

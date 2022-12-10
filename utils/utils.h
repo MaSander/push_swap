@@ -14,5 +14,10 @@ void	ft_lstdelone(t_stack *lst);
 t_stack	*ft_lstlast(t_stack *lst);
 t_stack	*ft_lstnew(int number);
 int		ft_lstsize(t_stack *lst);
+size_t	ft_strlen(const char *s);
+size_t	ft_putstr_fd(char *s, int fd);
+size_t	ft_putchar_fd(char c, int fd);
+
+void ft_update_head_stack(t_stack *stack); //Validar utilização
 
 #endif

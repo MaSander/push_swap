@@ -6,5 +6,6 @@
 
 # include "struct.h"
 # include "./utils/utils.h"
+# include "./operations/operation.h"
 
 #endif
