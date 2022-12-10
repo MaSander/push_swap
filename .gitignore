@@ -1,1 +1,3 @@
 *.o
+*.log
+push_swap
