@@ -1,19 +1,10 @@
 #ifndef UTILS_H
 # define UTILS_H
-# include <stdlib.h>
-# include <unistd.h>
+
 # include "./../push_swap.h"
 
-typedef struct s_stack
-{
-	int		number;
-	struct s_stack	*head;
-	struct s_stack	*tail;
-	struct s_stack	*last;
-	struct s_stack *next;
-} t_stack;
-
 int	ft_atoi(const char *str);
+void	ft_free(void *ptr);
 
 // Listas
 void	ft_lstadd_back(t_stack **lst, t_stack *new);

@@ -7,6 +7,7 @@ SRCS=push_swap.c \
 	./utils/ft_lstdelone.c \
 	./utils/ft_lstlast.c \
 	./utils/ft_lstnew.c \
+	./utils/ft_free.c \
 	./utils/ft_lstsize.c
 
 OBJS=$(SRCS:.c=.o)
@@ -29,3 +30,7 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+valgrind: re
+	rm -rf valgrind.log
+	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 3 4 5 1 2 3 5 7 8
