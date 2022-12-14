@@ -14,7 +14,8 @@ SRCS=push_swap.c \
 	./utils/ft_pintables.c \
 	./operations/swap.c \
 	./operations/rotate.c \
-	./operations/reverse.c
+	./operations/reverse.c \
+	./operations/push.c
 
 OBJS=$(SRCS:.c=.o)
 CC=cc
