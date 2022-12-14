@@ -38,7 +38,7 @@ int	main(int argc, char ** argv)
 		convert_argv_to_int(argv[index++], stack_a);
 	ft_lstprint(stack_a);
 	printf("\n");
-	ft_swap(stack_a, 'a');
+	stack_a = ft_rotate(stack_a, 'a');
 	ft_lstprint(stack_a);
 	ft_lstclear(&stack_a);
 	return (0);
