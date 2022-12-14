@@ -21,3 +21,18 @@ void	ft_swap(t_stack *stack, char stack_name)
 	ft_putchar_fd(stack_name, 1);
 	ft_putstr_fd("\n", 1);
 }
+
+void	ft_swap_swap(t_stack *stack_a, t_stack *stack_b)
+{
+	int	aux;
+
+	aux = stack_a->number;
+	stack_a->number = stack_a->next->number;
+	stack_a->next->number = aux;
+	aux = stack_b->number;
+	stack_b->number = stack_b->next->number;
+	stack_b->next->number = aux;
+	ft_putstr_fd("s", 1);
+	ft_putchar_fd("s", 1);
+	ft_putstr_fd("\n", 1);
+}
