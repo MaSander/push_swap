@@ -13,7 +13,8 @@ SRCS=push_swap.c \
 	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
 	./operations/swap.c \
-	./operations/rotate.c
+	./operations/rotate.c \
+	./operations/reverse.c
 
 OBJS=$(SRCS:.c=.o)
 CC=cc
