@@ -28,8 +28,10 @@ int	main(int argc, char ** argv)
 {
 	int index;
 	t_stack *stack_a;
+	t_stack *stack_b;
 
 	index = 1;
+	stack_b = ft_lstnew(33);
 	stack_a = ft_lstnew(ft_atoi(argv[index]));
 	stack_a->head = stack_a;
 	stack_a->last = NULL;
@@ -38,8 +40,19 @@ int	main(int argc, char ** argv)
 		convert_argv_to_int(argv[index++], stack_a);
 	ft_lstprint(stack_a);
 	printf("\n");
-	ft_swap(stack_a, 'a');
+	ft_lstprint(stack_b);
+	printf("\n");
+	ft_push(&stack_a, &stack_b, 'a');
+	ft_push(&stack_a, &stack_b, 'a');
+	ft_push(&stack_a, &stack_b, 'a');
+	ft_push(&stack_a, &stack_b, 'a');
+	stack_b = ft_reverse_rotate(stack_b, 'b');
+	printf("\n");
 	ft_lstprint(stack_a);
+	printf("\n");
+	ft_lstprint(stack_b);
+	printf("\n");
+
 	ft_lstclear(&stack_a);
 	return (0);
 }

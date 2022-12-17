@@ -12,7 +12,10 @@ SRCS=push_swap.c \
 	./utils/ft_free.c \
 	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
-	./operations/swap.c
+	./operations/swap.c \
+	./operations/rotate.c \
+	./operations/reverse.c \
+	./operations/push.c
 
 OBJS=$(SRCS:.c=.o)
 CC=cc
@@ -37,4 +40,4 @@ re: fclean all
 
 valgrind: re
 	rm -rf valgrind.log
-	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 3 4 5 1 2 3 5 7 8
+	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 1 2 3 4 5 6 7 8
