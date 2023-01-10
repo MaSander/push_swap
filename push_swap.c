@@ -41,17 +41,17 @@ int	main(int argc, char ** argv)
 	ft_lstprint(stack_a);
 	printf("\n");
 	ft_lstprint(stack_b);
-	printf("\n");
-	ft_push(&stack_a, &stack_b, 'a');
-	ft_push(&stack_a, &stack_b, 'a');
-	ft_push(&stack_a, &stack_b, 'a');
-	ft_push(&stack_a, &stack_b, 'a');
-	stack_b = ft_reverse_rotate(stack_b, 'b');
-	printf("\n");
-	ft_lstprint(stack_a);
-	printf("\n");
-	ft_lstprint(stack_b);
-	printf("\n");
+	
+
+	/* TODO:
+	verificar binario da direita para esquerda
+	se for 0 envia para B
+	se for 1 envia para baixo da A
+	assim que terminar, concatenar as listas
+	validar a se está ordenado
+	caso não esteja ordenado, repetir o processo
+	*/ 
+
 
 	ft_lstclear(&stack_a);
 	return (0);
