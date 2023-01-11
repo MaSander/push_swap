@@ -1,5 +1,7 @@
 NAME=push_swap
 SRCS=push_swap.c \
+	./init_stack.c \
+	./sort_algorithm.c \
 	./utils/ft_atoi.c \
 	./utils/ft_lstadd_back.c \
 	./utils/ft_lstadd_front.c \
@@ -12,6 +14,7 @@ SRCS=push_swap.c \
 	./utils/ft_free.c \
 	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
+	./utils/is_sort.c \
 	./operations/swap.c \
 	./operations/rotate.c \
 	./operations/reverse.c \

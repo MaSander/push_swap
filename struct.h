@@ -11,4 +11,11 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
+typedef struct s_ps
+{
+	int				lst_len;
+	struct s_stack	*stack_a;
+	struct s_stack	*stack_b;
+} t_ps;
+
 #endif
