@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	ft_lstprint(ps.stack_a);
 
 	if(ps.lst_len == 3)
-		sort_three(&ps);
+		ps.stack_a = sort_three(ps.stack_a);
 	if(ps.lst_len == 5)
 		sort_five(&ps);
 

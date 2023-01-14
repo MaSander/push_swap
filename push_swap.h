@@ -9,7 +9,7 @@
 # include "./operations/operation.h"
 
 int	init(t_ps *ps, int argc, char **argv);
-void sort_three(t_ps *ps);
+t_stack	*sort_three(t_stack *s);
 void sort_five(t_ps *ps);
 
 #endif
