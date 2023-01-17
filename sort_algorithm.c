@@ -18,7 +18,7 @@ t_stack	*sort_three(t_stack *s)
 	third = s->next->next->number;
 	if (first < second && first > third && second > third)
 	 	s = ft_reverse_rotate(s, 'a');
-	if (first > second && first < third && second < third)
+	if (first > second && first > third && second < third)
 	 	s = ft_rotate(s, 'a');
 	return (s);
 }
