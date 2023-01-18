@@ -1,6 +1,7 @@
 NAME=push_swap
 SRCS=push_swap.c \
 	./init_stack.c \
+	./index_queue.c \
 	./sort_algorithm.c \
 	./utils/ft_atoi.c \
 	./utils/ft_lstadd_back.c \

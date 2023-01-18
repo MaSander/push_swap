@@ -8,6 +8,13 @@
 	"files.associations": {
 		"*.excalidraw": "json",
 		"*.excalidrawlib": "json",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"array": "c",
+		"deque": "c",
+		"string": "c",
+		"vector": "c",
+		"iterator": "c",
+		"string_view": "c",
+		"initializer_list": "c"
 	},
 }

@@ -7,5 +7,6 @@ t_stack	*ft_lstnew(int number)
 	node = (t_stack *)malloc(sizeof(t_stack));
 	node->number = number;
 	node->next = NULL;
+	node->index = 0;
 	return (node);
 }

@@ -19,11 +19,27 @@ int	main(int argc, char **argv)
 {
 	t_ps ps;
 
+	/*TODO:
+	Verificar se há numeros repetidos
+	criar index
+	*/
+
 	if(init(&ps, argc, argv) == 0)
 		return (-1);
 
 	printf("\n%d\n", ps.lst_len);
 	ft_lstprint(ps.stack_a);
+
+	index_queue(ps.stack_a, ps.lst_len);
+
+	t_stack *aux;
+	aux = ps.stack_a;
+	while (aux != 0)
+	{
+		printf("|%d-%d|\n", aux->index, aux->number);
+		aux = aux->next;
+	}
+	
 
 	if(ps.lst_len == 3)
 		ps.stack_a = sort_three(ps.stack_a);

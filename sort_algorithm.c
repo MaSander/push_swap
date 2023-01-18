@@ -25,5 +25,22 @@ t_stack	*sort_three(t_stack *s)
 
 void sort_five(t_ps  *ps)
 {
+	// t_stack *a;
 	ft_push(&ps->stack_a, &ps->stack_b, 'b');
+	ft_push(&ps->stack_a, &ps->stack_b, 'b');
+	sort_three(ps->stack_a);
+	// a = &ps->stack_a_number;
+	// if (ps->stack_b->number > a->next->next->number)
+	// {
+	// 	ft_push(&ps->stack_b, &ps->stack_a, 'a');
+	// }
+	// if (ps->stack_b->number > a->next->number)
+	// {
+	// 	// rra pa ra ra
+	// }
+	// if (ps->stack_b->number > a->number)
+	// {
+	// 	// ra pa rra
+
+	// }
 }
