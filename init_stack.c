@@ -11,6 +11,27 @@ void convert_argv_to_int(char *arg, t_stack *stack_a)
 	stack_aux->next->head = stack_a->head;
 }
 
+int	verify_equal_or_isdigit(char **argv)
+{
+	int		len;
+	int		i;
+
+	i = 1;
+	len = 1;
+	while (argv[i])
+	{
+		while (argv[len])
+		{
+			if (*argv[len] == *argv[i] && len != i)
+				return (-2);
+			len++;
+		}
+		len = 1;
+		i++;
+	}
+	return (0);
+}
+
 int	init(t_ps *ps, int argc, char **argv)
 {
 
@@ -18,9 +39,11 @@ int	init(t_ps *ps, int argc, char **argv)
 	t_stack *stack_a;
 	t_stack *stack_b;
 
+	// if(verify_equal_or_isdigit(argv) < 0)
+	// 	return (-1);
+
 	/*
 	checar se
-	 - tem numero repetido
 	 - todos são digitos
 	*/
 
@@ -36,6 +59,5 @@ int	init(t_ps *ps, int argc, char **argv)
 	ps->stack_a = stack_a;
 	ps->stack_b = stack_b;
 	ps->lst_len = index - 1;
-
 	return (1);
 }

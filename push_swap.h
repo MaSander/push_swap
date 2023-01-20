@@ -4,6 +4,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+#        include <stdio.h>
+
+
 # include "struct.h"
 # include "./utils/utils.h"
 # include "./operations/operation.h"
