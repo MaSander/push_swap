@@ -1,5 +1,6 @@
 NAME=push_swap
 SRCS=push_swap.c \
+	./verify.c \
 	./init_stack.c \
 	./index_queue.c \
 	./sort_algorithm.c \
