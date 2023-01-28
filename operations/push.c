@@ -7,7 +7,6 @@ Do nothing if a is empty.
 */
 
 #include "./operation.h"
-# include "stdio.h"
 
 void	ft_push(t_stack **stack_sub, t_stack **stack_add, char stack_name)
 {

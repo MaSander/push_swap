@@ -1,7 +1,7 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-// TODO: remover essa função
+/** @warning TODO: remover essa função */
 void	ft_lstprint(t_stack *lst)
 {
 	t_stack	*node;
