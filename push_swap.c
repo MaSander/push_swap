@@ -16,6 +16,22 @@ void	ft_lstprint(t_stack *lst)
 	printf("\n");
 }
 
+void execute_rotates_report(t_report *report, t_ps *ps)
+{
+	while (report->moves)
+	{
+		if(RA)
+			ft_rotate(ps->stack_a, 'a');
+		if(RB)
+			ft_rotate(ps->stack_b, 'b');
+		if(RRA)
+			ft_reverse_rotate(ps->stack_a, 'a');
+		if(RRB)
+			ft_reverse_rotate(ps->stack_b, 'b');
+		report->moves = report->moves - 1;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_ps ps;
