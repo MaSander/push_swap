@@ -1,5 +1,19 @@
 #include "push_swap.h"
 
+int	ft_numlst(t_stack *lst, int number)
+{
+	t_stack	*node;
+
+	while (lst)
+	{
+		node = lst;
+		lst = lst->next;
+		if (number == node->number)
+			return (TRUE);
+	}
+	return (FALSE);
+}
+
 void convert_argv_to_int(char *arg, t_stack *stack_a)
 {
 	t_stack *stack_aux;
@@ -11,25 +25,30 @@ void convert_argv_to_int(char *arg, t_stack *stack_a)
 	stack_aux->next->head = stack_a->head;
 }
 
-int	verify_equal_or_isdigit(char **argv)
+static int verify_repet(char **argv)
 {
-	int		len;
-	int		i;
+	int index;
+	t_stack *stack;
 
-	i = 1;
-	len = 1;
-	while (argv[i])
+	index = 1;
+	stack = NULL;
+	while (argv[index])
 	{
-		while (argv[len])
+		if (stack == NULL)
+			stack = ft_lstnew(ft_atoi(argv[index]));
+		else
 		{
-			if (*argv[len] == *argv[i] && len != i)
-				return (-2);
-			len++;
+			if (ft_numlst(stack, ft_atoi(argv[index])))
+			{
+				ft_lstclear(&stack);
+				return (TRUE);
+			}
+			ft_lstlast(stack)->next = ft_lstnew(ft_atoi(argv[index]));
 		}
-		len = 1;
-		i++;
+		index++;
 	}
-	return (0);
+	ft_lstclear(&stack);
+	return (FALSE);
 }
 
 int	init(t_ps *ps, int argc, char **argv)
@@ -39,6 +58,8 @@ int	init(t_ps *ps, int argc, char **argv)
 	t_stack *stack_a;
 	t_stack *stack_b;
 
+	if (verify_repet(argv))
+		return (FALSE);
 	// if(verify_equal_or_isdigit(argv) < 0)
 	// 	return (-1);
 
