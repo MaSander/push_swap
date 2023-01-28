@@ -10,18 +10,22 @@ t_report	*calculate_rotate(t_stack *s, int target)
 	*/
 	int count;
 	int	front;
-	int	back;
+	// int	back;
+	t_report *report;
 
-	back = s->last->index;
+	report = 0;
+	// back = s->last->index;
 	front = s->head->index;
+	count = 0;
 	while (target > front)
 	{
-		front = s->next->in;
-		back = s->index;
+		front = s->next->index;
+		// back = s->index;
 		count++;
-	}d
-	
-
+	}
+	report->moves = count;
+	report->action = RA;
+	return (report);
 }
 
 t_stack	*sort_three(t_stack *s)
