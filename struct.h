@@ -3,6 +3,18 @@
 
 # include "./push_swap.h"
 
+# define PB 0
+# define PA 1
+# define RA 2
+# define RB 3
+# define RR 4
+# define RRA 5
+# define RRB 6
+# define RRR 7
+# define SA 8
+# define SB 9
+# define SS 10
+
 /**
  * @brief a stack tem number que representa o argumento que vem por parametro e index a representação dele em um index
  */
@@ -24,5 +36,11 @@ typedef struct s_ps
 	struct s_stack	*stack_a;
 	struct s_stack	*stack_b;
 } t_ps;
+
+typedef struct s_report
+{
+	int moves;
+	int	action;
+} t_report;
 
 #endif
