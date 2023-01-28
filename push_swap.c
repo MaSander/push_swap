@@ -20,13 +20,13 @@ void execute_rotates_report(t_report *report, t_ps *ps)
 {
 	while (report->moves)
 	{
-		if(RA)
+		if(report->action == RA)
 			ft_rotate(ps->stack_a, 'a');
-		if(RB)
+		if(report->action == RB)
 			ft_rotate(ps->stack_b, 'b');
-		if(RRA)
+		if(report->action == RRA)
 			ft_reverse_rotate(ps->stack_a, 'a');
-		if(RRB)
+		if(report->action == RRB)
 			ft_reverse_rotate(ps->stack_b, 'b');
 		report->moves = report->moves - 1;
 	}
@@ -42,20 +42,16 @@ int	main(int argc, char **argv)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
 
-		// if(ps.lst_len <= 3)
-		// {
-		// 	printf("Sort 3");
-		// 	ps.stack_a = sort_three(ps.stack_a);
-		// }
-		// else if(ps.lst_len <= 5)
-		// {
-		// 	printf("Sort 5");
-		// 	sort_five(&ps);
-		// }
-
-		ft_lstprint(ps.stack_a);
-		// aux = ft_clonelst(ps.stack_a);
-		ft_lstprint(ft_clonelst(ps.stack_a));
+		if(ps.lst_len <= 3)
+		{
+			printf("Sort 3");
+			ps.stack_a = sort_three(ps.stack_a);
+		}
+		else if(ps.lst_len <= 5)
+		{
+			printf("Sort 5");
+			sort_five(&ps);
+		}
 
 		ft_lstclear(&ps.stack_a);
 		ft_lstclear(&ps.stack_b);
