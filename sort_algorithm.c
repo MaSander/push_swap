@@ -4,8 +4,8 @@ t_report	*calculate_rotate(t_stack *s, int target)
 {
 	/* TODO: saber quantas rotações preciso dar para colocar o alvo no lugar
 
-	saber numero mais alto
-	saber o numero mais baixo?
+	saber maior index
+	saber menor index
 
 	*/
 	int count;

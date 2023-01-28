@@ -18,5 +18,6 @@ int		init(t_ps *ps, int argc, char **argv);
 t_stack	*sort_three(t_stack *s);
 void	index_queue(t_stack *sa, int satck_len);
 void	sort_five(t_ps *ps);
+void	insert_sort(t_ps *ps);
 
 #endif

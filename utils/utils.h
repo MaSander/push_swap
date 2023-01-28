@@ -46,6 +46,19 @@ size_t	ft_putchar_fd(char c, int fd);
 
 int		is_sort(t_ps *ps);
 
+/**
+ * @file ft_findindex.c
+ * @brief encontra menor index de uma lista
+ * @return menor index encontrado
+ */
+int	find_smallest_index(t_stack *s);
+/**
+ * @file ft_findindex.c
+ * @brief encontra maior index de uma lista
+ * @return maior index encontrado
+ */
+int	find_biggest_index(t_stack *s);
+
 
 void ft_update_head_stack(t_stack *stack); //Validar utilização
 
