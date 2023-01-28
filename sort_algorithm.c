@@ -1,5 +1,29 @@
 #include "push_swap.h"
 
+t_report	*calculate_rotate(t_stack *s, int target)
+{
+	/* TODO: saber quantas rotações preciso dar para colocar o alvo no lugar
+	
+	saber numero mais alto
+	saber o numero mais baixo?
+
+	*/
+	int count;
+	int	front;
+	int	back;
+
+	back = s->last->index;
+	front = s->head->index;
+	while (target > front)
+	{
+		front = s->next->in;
+		back = s->index;
+		count++;
+	}d
+	
+
+}
+
 t_stack	*sort_three(t_stack *s)
 { 
 	int	first;
