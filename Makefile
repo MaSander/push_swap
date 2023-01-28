@@ -1,6 +1,7 @@
 NAME=push_swap
 SRCS=push_swap.c \
 	./verify.c \
+	./insert_sort.c \
 	./init_stack.c \
 	./index_queue.c \
 	./sort_algorithm.c \
@@ -18,6 +19,7 @@ SRCS=push_swap.c \
 	./utils/ft_pintables.c \
 	./utils/is_sort.c \
 	./utils/ft_clonelst.c \
+	./utils/ft_find_index.c \
 	./operations/swap.c \
 	./operations/rotate.c \
 	./operations/reverse.c \
