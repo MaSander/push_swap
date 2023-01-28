@@ -22,21 +22,17 @@ int	main(int argc, char **argv)
 	if (init(&ps, argc, argv) >= 0)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
-	
-		t_stack *aux;
-		aux = ps.stack_a;
-		
-		while (aux)
+
+		if(ps.lst_len <= 3)
 		{
-			printf("\n| %d   ->   %d  |\n", aux->index, aux->number);
-			aux = aux->next;
-		}
-		
-		
-		if(ps.lst_len == 3)
+			printf("Sort 3");
 			ps.stack_a = sort_three(ps.stack_a);
-		if(ps.lst_len == 5)
+		}
+		else if(ps.lst_len <= 5)
+		{
+			printf("Sort 5");
 			sort_five(&ps);
+		}
 		ft_lstclear(&ps.stack_a);
 		ft_lstclear(&ps.stack_b);
 		return (0);
