@@ -10,6 +10,7 @@
 # define FALSE 0
 
 # include "struct.h"
+# include "verify.h"
 # include "./utils/utils.h"
 # include "./operations/operation.h"
 
