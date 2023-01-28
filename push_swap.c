@@ -52,7 +52,6 @@ int	main(int argc, char **argv)
 		// 	printf("Sort 5");
 		// 	sort_five(&ps);
 		// }
-		ft_lstprint(ps.stack_a);
 		insert_sort(&ps);
 		ft_lstprint(ps.stack_a);
 

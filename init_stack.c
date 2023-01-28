@@ -37,7 +37,7 @@ int	init(t_ps *ps, int argc, char **argv)
 	index++;
 	while (index < argc)
 		convert_argv_to_int(argv[index++], stack_a);
-	stack_b = ft_lstnew(0);
+	stack_b = NULL;
 	ps->stack_a = stack_a;
 	ps->stack_b = stack_b;
 	ps->lst_len = index - 1;
