@@ -16,6 +16,14 @@ t_stack	*ft_lstnew(int number);
 int		ft_lstsize(t_stack *lst);
 
 /**
+ * @file ft_clonelst.c
+ * @brief clona a stack
+ * @return ponteiro para uma nova struct
+ * @warning tem que da free
+ */
+t_stack	*ft_clonelst(t_stack *lst);
+
+/**
  * @file ft_strlen.c
  * @brief conta o comprimento de uma sting ou vetor
  * @return quantidade de bytes de uma string
