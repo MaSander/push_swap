@@ -12,6 +12,7 @@
 # include "struct.h"
 # include "./utils/utils.h"
 # include "./operations/operation.h"
+# include "./radix/radix.h"
 
 void			ft_lstprint(t_stack *lst);
 
