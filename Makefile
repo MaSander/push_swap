@@ -48,7 +48,7 @@ re: fclean all
 
 test: re
 	cp ./push_swap ./test/push_swap
-	bash ./tester/tester.sh
+	bash ./test/tester.sh
 
 valgrind: re
 	rm -rf valgrind.log
