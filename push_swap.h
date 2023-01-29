@@ -11,6 +11,7 @@
 
 # include "struct.h"
 # include "verify.h"
+# include "./radix/radix.h"
 # include "./utils/utils.h"
 # include "./operations/operation.h"
 

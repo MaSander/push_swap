@@ -35,9 +35,7 @@ void execute_rotates_report(t_report *report, t_ps *ps)
 int	main(int argc, char **argv)
 {
 	t_ps ps;
-	// t_stack *aux;
 
-	// aux = 0;
 	if (init(&ps, argc, argv) >= 0)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
@@ -46,9 +44,8 @@ int	main(int argc, char **argv)
 			ps.stack_a = sort_three(ps.stack_a);
 		else if(ps.lst_len <= 5)
 			sort_five(&ps);
-		// ft_lstprint(ps.stack_a);
-		insert_sort(&ps);
-		// ft_lstprint(ps.stack_a);
+		else
+			ft_radix(&ps);
 		ft_lstclear(&ps.stack_a);
 		ft_lstclear(&ps.stack_b);
 		return (0);

@@ -20,6 +20,7 @@ SRCS=push_swap.c \
 	./utils/is_sort.c \
 	./utils/ft_clonelst.c \
 	./utils/ft_find_index.c \
+	./radix/ft_radix.c \
 	./operations/swap.c \
 	./operations/rotate.c \
 	./operations/reverse.c \
@@ -53,8 +54,8 @@ test: re
 check:
 	make re && ARG=`ruby -e "puts (-1000..1000).to_a.shuffle.join(' ')"`; echo $ARG; ./push_swap $ARG | ./test/checker_linux $ARG
 
-view:
-	./venv/bin/python3 ./pyviz.py `ruby -e "puts (1..70).to_a.shuffle.join(' ')"`
+view: re
+	./venv/bin/python3 ./pyviz.py `ruby -e "puts (-100..100).to_a.shuffle.join(' ')"`
 
 valgrind: re
 	rm -rf valgrind.log
