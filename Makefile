@@ -50,6 +50,12 @@ test: re
 	cp ./push_swap ./test/push_swap
 	bash ./test/tester.sh
 
+check:
+	make re && ARG=`ruby -e "puts (-1000..1000).to_a.shuffle.join(' ')"`; echo $ARG; ./push_swap $ARG | ./test/checker_linux $ARG
+
+view:
+	./venv/bin/python3 ./pyviz.py `ruby -e "puts (1..70).to_a.shuffle.join(' ')"`
+
 valgrind: re
 	rm -rf valgrind.log
 	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 1 2 3 4 5 6 7 8
