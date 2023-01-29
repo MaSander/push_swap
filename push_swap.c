@@ -53,5 +53,6 @@ int	main(int argc, char **argv)
 		ft_lstclear(&ps.stack_b);
 		return (0);
 	}
-	return (-1);
+	ft_putstr_fd("Error", 1);
+	return (1);
 }
