@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 	// t_stack *aux;
 
 	// aux = 0;
-	if (init(&ps, argc, argv) >= 0)
+	if (init(&ps, argc, argv) != FALSE)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
 

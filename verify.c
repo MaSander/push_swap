@@ -1,41 +1,52 @@
 #include "push_swap.h"
 
-static int	ft_numlst(t_stack *lst, int number)
+static int ft_arg_is_digit(char *arg)
 {
-	t_stack	*node;
-
-	while (lst)
+	while (*arg)
 	{
-		node = lst;
-		lst = lst->next;
-		if (number == node->number)
-			return (TRUE);
+		if(*arg < '0' || *arg > '9')
+			return (FALSE);
+		arg++;
 	}
-	return (FALSE);
+	return (TRUE);
 }
 
-int verify_repet(char **argv)
+static int compare_args(char *str1, char *str2)
+{
+ 	size_t	i;
+
+	i = 0;
+	while (str1[i] || str2[i])
+	{
+		if (str1[i] != str2[i])
+			return (TRUE);
+		i++;
+	}
+	if(str1[i] == 0 && str2[i] == 0)
+		return (FALSE);
+	return (TRUE);
+}
+
+int verify_argv(char **argv)
 {
 	int index;
-	t_stack *stack;
+	int index_retry;
 
 	index = 1;
-	stack = NULL;
+	index_retry = 1;
 	while (argv[index])
 	{
-		if (stack == NULL)
-			stack = ft_lstnew(ft_atoi(argv[index]));
-		else
+		if(ft_arg_is_digit(argv[index]) == FALSE)
+			return (FALSE);
+		while (index_retry != index)
 		{
-			if (ft_numlst(stack, ft_atoi(argv[index])))
-			{
-				ft_lstclear(&stack);
-				return (TRUE);
-			}
-			ft_lstlast(stack)->next = ft_lstnew(ft_atoi(argv[index]));
+			if(compare_args(argv[index], argv[index_retry]) == FALSE)
+				return (FALSE);
+			index_retry++;
 		}
 		index++;
+		index_retry = 1;
 	}
-	ft_lstclear(&stack);
-	return (FALSE);
+	return (TRUE);
 }
+
