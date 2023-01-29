@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 	// t_stack *aux;
 
 	// aux = 0;
-	if (init(&ps, argc, argv) >= 0)
+	if (init(&ps, argc, argv) != FALSE)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
 
@@ -53,5 +53,6 @@ int	main(int argc, char **argv)
 		ft_lstclear(&ps.stack_b);
 		return (0);
 	}
-	return (-1);
+	ft_putstr_fd("Error", 1);
+	return (1);
 }

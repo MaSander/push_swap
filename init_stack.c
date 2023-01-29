@@ -20,14 +20,8 @@ int	init(t_ps *ps, int argc, char **argv)
 	t_stack *stack_a;
 	t_stack *stack_b;
 
-	if (verify_repet(argv))
+	if (verify_argv(argv) == FALSE)
 		return (FALSE);
-
-
-	/*
-	checar se
-	 - todos são digitos
-	*/
 
 	index = 1;
 	//TODO: Validar se não vem em um argumento só
@@ -41,5 +35,5 @@ int	init(t_ps *ps, int argc, char **argv)
 	ps->stack_a = stack_a;
 	ps->stack_b = stack_b;
 	ps->lst_len = index - 1;
-	return (1);
+	return (TRUE);
 }
