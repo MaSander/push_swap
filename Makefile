@@ -46,6 +46,10 @@ fclean: clean
 
 re: fclean all
 
+test: re
+	cp ./push_swap ./tester/push_swap
+	bash ./tester/tester.sh
+
 valgrind: re
 	rm -rf valgrind.log
 	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 1 2 3 4 5 6 7 8
