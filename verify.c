@@ -2,6 +2,8 @@
 
 static int ft_arg_is_digit(char *arg)
 {
+	if(arg[0] == '-')
+		arg++;
 	while (*arg)
 	{
 		if(*arg < '0' || *arg > '9')

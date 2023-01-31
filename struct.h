@@ -20,7 +20,7 @@
  */
 typedef struct s_stack
 {
-	int				number;
+	size_t			number;
 	int				index;
 	struct s_stack	*head;
 	struct s_stack	*last;
