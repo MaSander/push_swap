@@ -20,8 +20,5 @@ int	ft_radix(t_ps *ps)
 			ft_push(&ps->stack_b, &ps->stack_a, 'a');
 		index_bit++;
 	}
-	while (ps->stack_a->index < ps->stack_a->next->index)
-		ps->stack_a = ft_reverse_rotate(ps->stack_a, 'a');
-	ps->stack_a = ft_reverse_rotate(ps->stack_a, 'a');
 	return (0);
 }

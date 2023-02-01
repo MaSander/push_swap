@@ -11,7 +11,7 @@ void	ft_lstprint(t_stack *lst)
 	{
 		node = lst;
 		lst = lst->next;
-		printf("(%ld)->", node->number);
+		printf("(%lld)->", node->number);
 	}
 	printf("\n");
 }
@@ -46,7 +46,6 @@ int	main(int argc, char **argv)
 			sort_five(&ps);
 		else
 			ft_radix(&ps);
-		ft_lstprint(ps.stack_a);
 		ft_lstclear(&ps.stack_a);
 		ft_lstclear(&ps.stack_b);
 		return (0);
