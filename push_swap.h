@@ -27,5 +27,6 @@ void	insert_sort(t_ps *ps);
  * @return @c TRUE caso encontre um numero repetido e @c FALSE caso não encontre
  */
 int		verify_argv(char **argv);
+int verify_lst_is_sorted(t_stack *s);
 
 #endif
