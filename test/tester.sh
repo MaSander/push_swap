@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    tester.sh                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lmartins <lmartins@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: coder <coder@student.42sp.org.br>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/04 16:53:09 by lfrasson          #+#    #+#              #
-#    Updated: 2021/09/10 08:48:44 by lmartins         ###   ########.fr        #
+#    Updated: 2023/02/01 04:24:31 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,12 +47,7 @@ then
 	exit
 fi
 
-if [ "$(eval uname)" == "Linux" ]
-then
-	CHECKER=./checker_linux
-else
-	CHECKER=./checker
-fi
+export CHECKER=/home/burato/push_swap/test/checker_linux
 
 if ! command -v $CHECKER &> /dev/null
 then

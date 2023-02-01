@@ -24,7 +24,8 @@ int	main(int argc, char **argv)
 	if (init(&ps, argc, argv) != FALSE)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
-		ft_lstprint(ps.stack_a);
+		if (verify_lst_is_sorted(ps.stack_a) != FALSE)
+			return (0);
 		if(ps.lst_len <= 3)
 			ps.stack_a = sort_three(ps.stack_a);
 		else if(ps.lst_len <= 5)
