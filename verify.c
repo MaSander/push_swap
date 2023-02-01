@@ -52,3 +52,13 @@ int verify_argv(char **argv)
 	return (TRUE);
 }
 
+int verify_lst_is_sorted(t_stack *s)
+{
+	while (s->next)
+	{
+		if(s->number > s->next->number)
+			return (FALSE);
+		s = s->next;
+	}
+	return (TRUE);
+}
