@@ -1,29 +1,13 @@
 #include "push_swap.h"
-#include <stdio.h>
-
-/** @warning TODO: remover essa função */
-void	ft_lstprint(t_stack *lst)
-{
-	t_stack	*node;
-
-	printf("\n");
-	while (lst)
-	{
-		node = lst;
-		lst = lst->next;
-		printf("(%lld::", node->index);
-		printf("%lld)->", node->number);
-	}
-	printf("\n");
-}
 
 int	main(int argc, char **argv)
 {
 	t_ps	ps;
 
+	if (argc == 1)
+		return (0);
 	if (init(&ps, argc, argv) != FALSE)
 	{
-		index_queue(ps.stack_a, ps.lst_len);
 		if (verify_lst_is_sorted(ps.stack_a) != TRUE)
 		{
 			if (ps.lst_len == 2)

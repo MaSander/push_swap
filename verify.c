@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static int ft_arg_is_digit(char *arg)
+static int	ft_arg_is_digit(char *arg)
 {
 	if(arg[0] == '-')
 		arg++;
@@ -13,9 +13,9 @@ static int ft_arg_is_digit(char *arg)
 	return (TRUE);
 }
 
-static int compare_args(char *str1, char *str2)
+static int	compare_args(char *str1, char *str2)
 {
- 	size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (str1[i] || str2[i])
@@ -29,7 +29,7 @@ static int compare_args(char *str1, char *str2)
 	return (TRUE);
 }
 
-int verify_argv(char **argv)
+int	verify_argv(char **argv)
 {
 	int index;
 	int index_retry;
@@ -54,7 +54,7 @@ int verify_argv(char **argv)
 	return (TRUE);
 }
 
-int verify_lst_is_sorted(t_stack *s)
+int	verify_lst_is_sorted(t_stack *s)
 {
 	while (s->next)
 	{

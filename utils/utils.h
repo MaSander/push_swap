@@ -18,13 +18,6 @@ int			ft_lstsize(t_stack *lst);
 char		**ft_split(const char *s, char c);
 
 /**
- * @file ft_strlen.c
- * @brief conta o comprimento de uma sting ou vetor
- * @return quantidade de bytes de uma string
- */
-size_t		ft_strlen(const char *s);
-
-/**
  * @file ft_pintables.c
  * @brief printa na tela uma string
  * @return quantidade de caracteres que printou
@@ -40,12 +33,6 @@ size_t		ft_putchar_fd(char c, int fd);
 
 int			is_sort(t_ps *ps);
 
-/**
- * @file ft_findindex.c
- * @brief encontra menor index de uma lista
- * @return menor index encontrado
- */
-int			find_smallest_index(t_stack *s);
 /**
  * @file ft_findindex.c
  * @brief encontra um index menor que a referencia

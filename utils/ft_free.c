@@ -21,3 +21,22 @@ void	ft_free_array(char **ptr)
 	}
 	ft_free(ptr);
 }
+
+void	ft_lstclear(t_stack **lst)
+{
+	t_stack	*node;
+
+	while (*lst)
+	{
+		node = *lst;
+		*lst = (*lst)->next;
+		free(node);
+	}
+}
+
+void	ft_lstdelone(t_stack *lst)
+{
+	if (!lst)
+		return ;
+	free(lst);
+}

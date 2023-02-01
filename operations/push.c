@@ -1,17 +1,9 @@
-/*
-pa (push a): Take the first element at the top of b and put it at the top of a.
-Do nothing if b is empty.
-
-pb (push b): Take the first element at the top of a and put it at the top of b.
-Do nothing if a is empty.
-*/
-
 #include "./operation.h"
 
 void	ft_push(t_stack **stack_sub, t_stack **stack_add, char stack_name)
 {
-	t_stack *Added;
-	t_stack *subtracted;
+	t_stack	*Added;
+	t_stack	*subtracted;
 
 	if(!*stack_sub)
 		return ;

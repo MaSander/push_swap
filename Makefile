@@ -1,24 +1,16 @@
 NAME=push_swap
 SRCS=push_swap.c \
 	./verify.c \
-	./insert_sort.c \
 	./init_stack.c \
-	./index_queue.c \
 	./sort_algorithm.c \
 	./utils/ft_atoi.c \
-	./utils/ft_lstadd_back.c \
-	./utils/ft_lstadd_front.c \
-	./utils/ft_lstclear.c \
-	./utils/ft_lstdelone.c \
 	./utils/ft_lstlast.c \
 	./utils/ft_lstnew.c \
 	./utils/ft_lstsize.c \
 	./utils/ft_free.c \
-	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
 	./utils/is_sort.c \
 	./utils/ft_split.c \
-	./utils/ft_find_index.c \
 	./radix/ft_radix.c \
 	./operations/swap.c \
 	./operations/rotate.c \
@@ -49,13 +41,3 @@ re: fclean all
 test: re
 	cp ./push_swap ./test/push_swap
 	bash ./test/tester.sh
-
-check:
-	make re && ARG=`ruby -e "puts (-1000..1000).to_a.shuffle.join(' ')"`; echo $ARG; ./push_swap $ARG | ./test/checker_linux $ARG
-
-view: re
-	./venv/bin/python3 ./pyviz.py `ruby -e "puts (0..4).to_a.shuffle.join(' ')"`
-
-valgrind: re
-	rm -rf valgrind.log
-	valgrind --show-leak-kinds=all --leak-check=full --track-origins=yes --log-file=valgrind.log ./$(NAME) 1 2 3 4 5 6 7 8

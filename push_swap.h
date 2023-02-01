@@ -20,7 +20,6 @@ int		init(t_ps *ps, int argc, char **argv);
 t_stack	*sort_three(t_stack *s);
 t_stack *sort_two(t_stack *s);
 void	sort_five(t_ps *ps);
-void	index_queue(t_stack *sa, int satck_len);
 void	insert_sort(t_ps *ps);
 /**
  * @file verify.c

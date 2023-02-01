@@ -2,8 +2,8 @@
 
 int	ft_radix(t_ps *ps)
 {
-	long unsigned int index_bit;
-	int index;
+	long unsigned int	index_bit;
+	int					index;
 
 	index_bit = 0;
 	while (index_bit < 16UL)
