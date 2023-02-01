@@ -38,7 +38,7 @@ int verify_argv(char **argv)
 	index_retry = 1;
 	while (argv[index])
 	{
-		if(-2147483649l < (long int)argv[index] && 2147483648 > (long int)argv[index])
+		if(-2147483649L >= ft_atoi(argv[index]) || 2147483648L <= ft_atoi(argv[index]))
 			return (FALSE);
 		if(ft_arg_is_digit(argv[index]) == FALSE)
 			return (FALSE);
