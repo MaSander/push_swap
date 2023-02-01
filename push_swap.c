@@ -11,7 +11,8 @@ void	ft_lstprint(t_stack *lst)
 	{
 		node = lst;
 		lst = lst->next;
-		printf("(%lld)->", node->number);
+		printf("(%lld::", node->index);
+		printf("%lld)->", node->number);
 	}
 	printf("\n");
 }
@@ -23,6 +24,7 @@ int	main(int argc, char **argv)
 	if (init(&ps, argc, argv) != FALSE)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
+		ft_lstprint(ps.stack_a);
 		if(ps.lst_len <= 3)
 			ps.stack_a = sort_three(ps.stack_a);
 		else if(ps.lst_len <= 5)

@@ -1,6 +1,6 @@
 #include "utils.h"
 
-t_stack	*ft_lstnew(int number)
+t_stack	*ft_lstnew(long int number)
 {
 	t_stack	*node;
 

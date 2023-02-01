@@ -1,6 +1,6 @@
 #include "utils.h"
 
-static int	ft_check_sinal(size_t num, int sinal)
+static long int	ft_check_sinal(size_t num, int sinal)
 {
 	if (sinal % 2 == 1)
 		return ((num /= 10) * -1);
@@ -27,7 +27,7 @@ static const char	*ft_check_spaces(const char *str, int *sinal)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
 	int		index;
 	int		sinal;

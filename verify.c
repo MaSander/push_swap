@@ -38,6 +38,10 @@ int verify_argv(char **argv)
 	index_retry = 1;
 	while (argv[index])
 	{
+		if(-2147483649l < (long int)argv[index])
+			return (FALSE);
+		if(2147483648 > (long int)argv[index])
+			return (FALSE);
 		if(ft_arg_is_digit(argv[index]) == FALSE)
 			return (FALSE);
 		while (index_retry != index)
