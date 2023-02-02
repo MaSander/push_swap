@@ -20,11 +20,11 @@
  */
 typedef struct s_stack
 {
-	size_t			number;
-	int				index;
-	struct s_stack	*head;
-	struct s_stack	*last;
-	struct s_stack	*next;
+	long long int			number;
+	long long int				index;
+	struct s_stack		*head;
+	struct s_stack		*last;
+	struct s_stack		*next;
 }	t_stack;
 
 /**

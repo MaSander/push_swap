@@ -55,7 +55,7 @@ check:
 	make re && ARG=`ruby -e "puts (-1000..1000).to_a.shuffle.join(' ')"`; echo $ARG; ./push_swap $ARG | ./test/checker_linux $ARG
 
 view: re
-	./venv/bin/python3 ./pyviz.py `ruby -e "puts (-100..100).to_a.shuffle.join(' ')"`
+	./venv/bin/python3 ./pyviz.py `ruby -e "puts (-200..100).to_a.shuffle.join(' ')"`
 
 valgrind: re
 	rm -rf valgrind.log

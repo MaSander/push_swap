@@ -3,7 +3,7 @@
 void index_queue(t_stack *sa, int stack_len)
 {
 	t_stack	*sa_aux;
-	int		index_number;
+	long int	index_number;
 
 	index_number = stack_len;
 	sa_aux = sa;
@@ -19,5 +19,5 @@ void index_queue(t_stack *sa, int stack_len)
 		index_number = stack_len;
 		sa_aux = sa->head;
 		sa = sa->next;
-	}	
+	}
 }

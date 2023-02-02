@@ -34,6 +34,8 @@ t_stack	*sort_three(t_stack *s)
 	int	second;
 	int	third;
 
+	if (verify_lst_is_sorted(s) == TRUE)
+		return (s);
 	first = s->number;
 	second = s->next->number;
 	third = s->next->next->number;
@@ -53,6 +55,8 @@ t_stack	*sort_three(t_stack *s)
 
 void sort_five(t_ps  *ps)
 {
+	if (verify_lst_is_sorted(ps->stack_a) == TRUE)
+		return ;
 	// t_stack *a;
 	ft_push(&ps->stack_a, &ps->stack_b, 'b');
 	ft_push(&ps->stack_a, &ps->stack_b, 'b');

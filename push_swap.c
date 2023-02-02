@@ -11,25 +11,9 @@ void	ft_lstprint(t_stack *lst)
 	{
 		node = lst;
 		lst = lst->next;
-		printf("(%ld)->", node->number);
+		printf("(%lld)->", node->number);
 	}
 	printf("\n");
-}
-
-void execute_rotates_report(t_report *report, t_ps *ps)
-{
-	while (report->moves)
-	{
-		if(report->action == RA)
-			ft_rotate(ps->stack_a, 'a');
-		if(report->action == RB)
-			ft_rotate(ps->stack_b, 'b');
-		if(report->action == RRA)
-			ft_reverse_rotate(ps->stack_a, 'a');
-		if(report->action == RRB)
-			ft_reverse_rotate(ps->stack_b, 'b');
-		report->moves = report->moves - 1;
-	}
 }
 
 int	main(int argc, char **argv)
@@ -46,7 +30,6 @@ int	main(int argc, char **argv)
 			sort_five(&ps);
 		else
 			ft_radix(&ps);
-		ft_lstprint(ps.stack_a);
 		ft_lstclear(&ps.stack_a);
 		ft_lstclear(&ps.stack_b);
 		return (0);
