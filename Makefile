@@ -17,6 +17,7 @@ SRCS=push_swap.c \
 	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
 	./utils/is_sort.c \
+	./utils/ft_split.c \
 	./utils/ft_find_index.c \
 	./radix/ft_radix.c \
 	./operations/swap.c \

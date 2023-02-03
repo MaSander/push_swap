@@ -64,3 +64,13 @@ int verify_lst_is_sorted(t_stack *s)
 	}
 	return (TRUE);
 }
+
+char	**argv_is_grouped(int argc, char **argv)
+{
+	char	**new_argv;
+
+	new_argv = NULL;
+	if(argc == 2)
+		new_argv = ft_split(argv[1], ' ');
+	return (new_argv);
+}

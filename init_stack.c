@@ -15,16 +15,13 @@ static void convert_argv_to_int(char *arg, t_stack *stack_a)
 
 int	init(t_ps *ps, int argc, char **argv)
 {
-
 	int index;
 	t_stack *stack_a;
 	t_stack *stack_b;
 
 	if (verify_argv(argv) == FALSE)
 		return (FALSE);
-
 	index = 1;
-	//TODO: Validar se não vem em um argumento só
 	stack_a = ft_lstnew(ft_atoi(argv[index]));
 	stack_a->head = stack_a;
 	stack_a->last = NULL;

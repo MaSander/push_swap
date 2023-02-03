@@ -12,11 +12,15 @@ ss : sa and sb at the same time.
 
 void	ft_swap(t_stack *stack, char stack_name)
 {
-	int	aux;
+	int	aux_number;
+	int	aux_index;
 
-	aux = stack->number;
+	aux_number = stack->number;
+	aux_index = stack->index;
 	stack->number = stack->next->number;
-	stack->next->number = aux;
+	stack->index = stack->next->index;
+	stack->next->number = aux_number;
+	stack->next->index = aux_index;
 	ft_putstr_fd("s", 1);
 	ft_putchar_fd(stack_name, 1);
 	ft_putstr_fd("\n", 1);

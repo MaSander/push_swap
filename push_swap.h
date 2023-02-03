@@ -18,8 +18,9 @@ void			ft_lstprint(t_stack *lst);
 
 int		init(t_ps *ps, int argc, char **argv);
 t_stack	*sort_three(t_stack *s);
-void	index_queue(t_stack *sa, int satck_len);
+t_stack *sort_two(t_stack *s);
 void	sort_five(t_ps *ps);
+void	index_queue(t_stack *sa, int satck_len);
 void	insert_sort(t_ps *ps);
 /**
  * @file verify.c
@@ -27,6 +28,7 @@ void	insert_sort(t_ps *ps);
  * @return @c TRUE caso encontre um numero repetido e @c FALSE caso não encontre
  */
 int		verify_argv(char **argv);
-int verify_lst_is_sorted(t_stack *s);
+int		verify_lst_is_sorted(t_stack *s);
+char	**argv_is_grouped(int argc, char **argv);
 
 #endif
