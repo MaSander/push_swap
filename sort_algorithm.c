@@ -21,11 +21,11 @@ t_report	*calculate_rotate(t_stack *s, long long target)
 	report->action = RA;
 	if (i > s_size)
 		report->moves = i - s_size;
-	if (i > (s_size / 2) && i < s_size)
-	{
-		report->action = RRA;
-		i = i - s_size;
-	}
+	// if (i > (s_size / 2) && i < s_size)
+	// {
+	// 	report->action = RRA;
+	// 	i = i - s_size;
+	// }
 	return (report);
 }
 
