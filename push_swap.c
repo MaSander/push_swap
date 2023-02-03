@@ -18,12 +18,11 @@ void	ft_lstprint(t_stack *lst)
 
 int	main(int argc, char **argv)
 {
-	t_ps ps;
+	t_ps	ps;
 
 	if (init(&ps, argc, argv) != FALSE)
 	{
 		index_queue(ps.stack_a, ps.lst_len);
-
 		if(ps.lst_len <= 3)
 			ps.stack_a = sort_three(ps.stack_a);
 		else if(ps.lst_len <= 5)

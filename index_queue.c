@@ -1,8 +1,8 @@
 #include "push_swap.h"
 
-void index_queue(t_stack *sa, int stack_len)
+void	index_queue(t_stack *sa, int stack_len)
 {
-	t_stack	*sa_aux;
+	t_stack		*sa_aux;
 	long int	index_number;
 
 	index_number = stack_len;

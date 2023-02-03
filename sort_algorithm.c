@@ -8,7 +8,7 @@ t_report	*calculate_rotate(t_stack *s, int target)
 	saber menor index
 
 	*/
-	int count;
+	int	count;
 	int	front;
 	// int	back;
 	t_report *report;
@@ -47,32 +47,18 @@ t_stack	*sort_three(t_stack *s)
 	second = s->next->number;
 	third = s->next->next->number;
 	if (first < second && first > third && second > third)
-	 	s = ft_reverse_rotate(s, 'a');
+		s = ft_reverse_rotate(s, 'a');
 	if (first > second && first > third && second < third)
-	 	s = ft_rotate(s, 'a');
+		s = ft_rotate(s, 'a');
 	return (s);
 }
 
-void sort_five(t_ps  *ps)
+void	sort_five(t_ps  *ps)
 {
 	if (verify_lst_is_sorted(ps->stack_a) == TRUE)
 		return ;
-	// t_stack *a;
 	ft_push(&ps->stack_a, &ps->stack_b, 'b');
 	ft_push(&ps->stack_a, &ps->stack_b, 'b');
 	sort_three(ps->stack_a);
-	// a = &ps->stack_a_number;
-	// if (ps->stack_b->number > a->next->next->number)
-	// {
-	// 	ft_push(&ps->stack_b, &ps->stack_a, 'a');
-	// }
-	// if (ps->stack_b->number > a->next->number)
-	// {
-	// 	// rra pa ra ra
-	// }
-	// if (ps->stack_b->number > a->number)
-	// {
-	// 	// ra pa rra
-
-	// }
+	// TODO: continuar
 }

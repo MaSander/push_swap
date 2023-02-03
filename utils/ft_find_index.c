@@ -1,8 +1,9 @@
 #include "utils.h"
 
+// TODO: Deletar se não usar
 int	find_smallest_index(t_stack *s)
 {
-	int index;
+	int	index;
 
 	index = s->index;
 	while (s->next)
@@ -11,12 +12,12 @@ int	find_smallest_index(t_stack *s)
 			index = s->next->index;
 		s = s->next;
 	}
-	return index;
+	return (index);
 }
 
 int	find_biggest_index(t_stack *s)
 {
-	int index;
+	int	index;
 
 	index = s->index;
 	while (s->next)
@@ -25,5 +26,5 @@ int	find_biggest_index(t_stack *s)
 			index = s->next->index;
 		s = s->next;
 	}
-	return index;
+	return (index);
 }

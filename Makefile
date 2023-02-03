@@ -13,12 +13,10 @@ SRCS=push_swap.c \
 	./utils/ft_lstlast.c \
 	./utils/ft_lstnew.c \
 	./utils/ft_lstsize.c \
-	./utils/ft_update_head_stack.c \
 	./utils/ft_free.c \
 	./utils/ft_strlen.c \
 	./utils/ft_pintables.c \
 	./utils/is_sort.c \
-	./utils/ft_clonelst.c \
 	./utils/ft_find_index.c \
 	./radix/ft_radix.c \
 	./operations/swap.c \

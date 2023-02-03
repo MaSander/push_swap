@@ -16,12 +16,12 @@
 # define SS 10
 
 /**
- * @brief a stack tem number que representa o argumento que vem por parametro e index a representação dele em um index
+ * @brief struck para armazenar os numeros que serão ordenados
  */
 typedef struct s_stack
 {
-	long long int			number;
-	long long int				index;
+	long long int		number;
+	long long int		index;
 	struct s_stack		*head;
 	struct s_stack		*last;
 	struct s_stack		*next;
@@ -35,12 +35,12 @@ typedef struct s_ps
 	int				lst_len;
 	struct s_stack	*stack_a;
 	struct s_stack	*stack_b;
-} t_ps;
+}	t_ps;
 
 typedef struct s_report
 {
-	int moves;
+	int	moves;
 	int	action;
-} t_report;
+}	t_report;
 
 #endif
