@@ -39,9 +39,9 @@ t_stack	*sort_three(t_stack *s)
 	return (s);
 }
 
-void	sort_five(t_ps  *ps)
+void	sort_five(t_ps *ps)
 {
-	int lower_index;
+	int	lower_index;
 
 	while (ps->stack_a)
 	{

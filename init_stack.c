@@ -22,9 +22,9 @@ static void	index_queue(t_stack *sa, int stack_len)
 	}
 }
 
-static void convert_argv_to_int(char *arg, t_stack *stack_a)
+static void	convert_argv_to_int(char *arg, t_stack *stack_a)
 {
-	t_stack *stack_aux;
+	t_stack	*stack_aux;
 
 	stack_aux = ft_lstlast(stack_a);
 	stack_aux->next = ft_lstnew(ft_atoi(arg));
@@ -34,9 +34,9 @@ static void convert_argv_to_int(char *arg, t_stack *stack_a)
 
 int	init(t_ps *ps, int argc, char **argv)
 {
-	int index;
-	t_stack *stack_a;
-	t_stack *stack_b;
+	int		index;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (verify_argv(argv) == FALSE)
 		return (FALSE);

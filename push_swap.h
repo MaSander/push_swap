@@ -4,28 +4,22 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-#        include <stdio.h>
-
 # define TRUE 1
 # define FALSE 0
+# define MAXINT 2147483648L
+# define MININT -2147483649L
 
 # include "struct.h"
 # include "./utils/utils.h"
 # include "./operations/operation.h"
 # include "./radix/radix.h"
 
-void			ft_lstprint(t_stack *lst);
-
+void	ft_lstprint(t_stack *lst);
 int		init(t_ps *ps, int argc, char **argv);
 t_stack	*sort_three(t_stack *s);
-t_stack *sort_two(t_stack *s);
+t_stack	*sort_two(t_stack *s);
 void	sort_five(t_ps *ps);
 void	insert_sort(t_ps *ps);
-/**
- * @file verify.c
- * @brief Verifica se dentro do argv tem algum numero repetido, esses tem que ser numeros.
- * @return @c TRUE caso encontre um numero repetido e @c FALSE caso não encontre
- */
 int		verify_argv(char **argv);
 int		verify_lst_is_sorted(t_stack *s);
 char	**argv_is_grouped(int argc, char **argv);

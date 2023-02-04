@@ -2,20 +2,20 @@
 
 void	ft_push(t_stack **stack_sub, t_stack **stack_add, char stack_name)
 {
-	t_stack	*Added;
+	t_stack	*added;
 	t_stack	*subtracted;
 
-	if(!*stack_sub)
+	if (!*stack_sub)
 		return ;
-	Added = *stack_add;
+	added = *stack_add;
 	subtracted = *stack_sub;
 	*stack_sub = subtracted->next;
 	subtracted->last = 0;
 	*stack_add = subtracted;
-	if (Added)
+	if (added)
 	{
-		subtracted->next = Added;
-		Added->last = subtracted;
+		subtracted->next = added;
+		added->last = subtracted;
 	}
 	else
 	{

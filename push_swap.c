@@ -14,7 +14,7 @@ int	main(int argc, char **argv)
 				ft_swap(ps.stack_a, 'a');
 			else if (ps.lst_len == 3)
 				ps.stack_a = sort_three(ps.stack_a);
-			else if(ps.lst_len <= 5)
+			else if (ps.lst_len <= 5)
 				sort_five(&ps);
 			else
 				ft_radix(&ps);
