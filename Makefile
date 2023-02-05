@@ -1,26 +1,17 @@
 NAME=push_swap
 SRCS=push_swap.c \
 	./verify.c \
-	./init_stack.c \
+	./operation.c \
 	./sort_algorithm.c \
-	./utils/ft_atoi.c \
-	./utils/ft_lstlast.c \
-	./utils/ft_lstnew.c \
-	./utils/ft_lstsize.c \
-	./utils/ft_free.c \
-	./utils/ft_pintables.c \
-	./utils/is_sort.c \
-	./utils/ft_split.c \
-	./radix/ft_radix.c \
-	./operations/swap.c \
-	./operations/rotate.c \
-	./operations/reverse.c \
-	./operations/push.c
+	./ft_atoi.c \
+	./ft_lstutils.c \
+	./ft_free.c \
+	./ft_pintables.c \
 
 OBJS=$(SRCS:.c=.o)
 CC=cc
-CFLAGS= -O3 -Werror -Wall -Wextra -g3
-HEADER=push_swap.h ./utils/utils.h
+CFLAGS=-Werror -Wall -Wextra -g3
+HEADER=push_swap.h
 
 all: $(NAME)
 
@@ -37,7 +28,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-test: re
-	cp ./push_swap ./test/push_swap
-	bash ./test/tester.sh

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    tester.sh                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42sp.org.br>          +#+  +:+       +#+         #
+#    By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/04 16:53:09 by lfrasson          #+#    #+#              #
-#    Updated: 2023/02/01 09:21:04 by coder            ###   ########.fr        #
+#    Updated: 2023/02/01 10:51:42 by oburato          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ then
 	exit
 fi
 
-export CHECKER=/home/msander/42/push_swap/test/checker_linux
+export CHECKER=/home/burato/push_swap/test/checker_linux
 
 if ! command -v $CHECKER &> /dev/null
 then
