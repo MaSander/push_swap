@@ -1,31 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_algorithm.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/01 15:18:13 by oburato           #+#    #+#             */
+/*   Updated: 2023/02/05 11:14:18 by oburato          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-t_report	*calculate_rotate(t_stack *s, int target)
+int	is_sort(t_ps *ps)
 {
-	/* TODO: saber quantas rotações preciso dar para colocar o alvo no lugar
+	t_stack	*aux;
 
-	saber maior index
-	saber menor index
-
-	*/
-	int	count;
-	int	front;
-	// int	back;
-	t_report *report;
-
-	report = 0;
-	// back = s->last->index;
-	front = s->head->index;
-	count = 0;
-	while (target > front)
+	aux = ps->stack_a;
+	while (aux->next)
 	{
-		front = s->next->index;
-		// back = s->index;
-		count++;
+		if (aux->number < aux->next->number)
+			aux = aux->next;
+		else
+			return (-1);
 	}
-	report->moves = count;
-	report->action = RA;
-	return (report);
+	return (1);
+}
+
+static int	find_smallest_index(t_stack *s)
+{
+	int	index;
+
+	index = s->index;
+	while (s->next)
+	{
+		if (index > s->next->index)
+			index = s->next->index;
+		s = s->next;
+	}
+	return (index);
 }
 
 t_stack	*sort_three(t_stack *s)
@@ -53,12 +66,46 @@ t_stack	*sort_three(t_stack *s)
 	return (s);
 }
 
-void	sort_five(t_ps  *ps)
+void	sort_five(t_ps *ps)
 {
-	if (verify_lst_is_sorted(ps->stack_a) == TRUE)
-		return ;
-	ft_push(&ps->stack_a, &ps->stack_b, 'b');
-	ft_push(&ps->stack_a, &ps->stack_b, 'b');
-	sort_three(ps->stack_a);
-	// TODO: continuar
+	int	lower_index;
+
+	while (ps->stack_a)
+	{
+		if (verify_lst_is_sorted(ps->stack_a) == TRUE)
+			break ;
+		lower_index = find_smallest_index(ps->stack_a);
+		while (ps->stack_a->index != lower_index)
+			ps->stack_a = ft_rotate(ps->stack_a, 'a');
+		ft_push(&ps->stack_a, &ps->stack_b, 'b');
+	}
+	while (ps->stack_b)
+		ft_push(&ps->stack_b, &ps->stack_a, 'a');
+}
+
+int	ft_radix(t_ps *ps)
+{
+	long unsigned int	index_bit;
+	int					index;
+
+	index_bit = 0;
+	while (index_bit < 16UL)
+	{
+		index = 0;
+		while (index++ < ps->lst_len)
+		{
+			if (verify_lst_is_sorted(ps->stack_a) == TRUE)
+				break ;
+			if ((ps->stack_a->index >> index_bit) & 0b00000001)
+				ps->stack_a = ft_rotate(ps->stack_a, 'a');
+			else
+				ft_push(&ps->stack_a, &ps->stack_b, 'b');
+		}
+		while (ps->stack_b)
+			ft_push(&ps->stack_b, &ps->stack_a, 'a');
+		if (verify_lst_is_sorted(ps->stack_a) == TRUE)
+			break ;
+		index_bit++;
+	}
+	return (0);
 }

@@ -1,20 +1,8 @@
 {
-	"C_Cpp.errorSquiggles": "Disabled",
-	"42header.email": "coder@student.42sp.org.br",
-	"42header.username": "coder",
-	"editor.insertSpaces": false,
-	"editor.tabSize": 4,
-	"editor.detectIndentation": false,
-	"files.associations": {
-		"*.excalidraw": "json",
-		"*.excalidrawlib": "json",
-		"push_swap.h": "c",
-		"array": "c",
-		"deque": "c",
-		"string": "c",
-		"vector": "c",
-		"iterator": "c",
-		"string_view": "c",
-		"initializer_list": "c"
-	},
+    "files.associations": {
+        "*.excalidraw": "json",
+        "*.excalidrawlib": "json",
+        "push_swap.h": "c",
+        "utils.h": "c"
+    }
 }
