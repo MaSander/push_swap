@@ -3,6 +3,7 @@ SRCS=push_swap.c \
 	./verify.c \
 	./operation.c \
 	./sort_algorithm.c \
+	./sort_five.c \
 	./ft_atoi.c \
 	./ft_lstutils.c \
 	./ft_free.c \
