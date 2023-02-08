@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "stdio.h"
 
 static void	index_queue(t_stack *sa, int stack_len)
 {

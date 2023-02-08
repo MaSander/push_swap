@@ -47,7 +47,7 @@ then
 	exit
 fi
 
-export CHECKER=/home/burato/push_swap/test/checker_linux
+export CHECKER=/home/msander/42/push_swap/test/checker_linux
 
 if ! command -v $CHECKER &> /dev/null
 then
