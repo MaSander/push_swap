@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:18:13 by oburato           #+#    #+#             */
-/*   Updated: 2023/02/05 11:14:18 by oburato          ###   ########.fr       */
+/*   Updated: 2023/02/07 23:21:20 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,7 @@ t_stack	*sort_three(t_stack *s)
 	int	second;
 	int	third;
 
-	if (verify_lst_is_sorted(s) == TRUE)
-		return (s);
-	first = s->number;
-	second = s->next->number;
-	third = s->next->next->number;
-	if ((first > second && second < third && third > first)
-		|| (first > second && first > third && second > third)
-		|| (first < second && first < third && second > third))
-		ft_swap(s, 'a');
+	s = order_three(s);
 	first = s->number;
 	second = s->next->number;
 	third = s->next->next->number;

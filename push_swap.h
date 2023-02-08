@@ -6,7 +6,7 @@
 /*   By: oburato <oburato@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:18:23 by oburato           #+#    #+#             */
-/*   Updated: 2023/02/01 15:25:05 by oburato          ###   ########.fr       */
+/*   Updated: 2023/02/07 23:20:57 by oburato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ t_stack		*sort_three(t_stack *s);
 t_stack		*sort_two(t_stack *s);
 void		sort_five(t_ps *ps);
 int			ft_radix(t_ps *ps);
+t_stack		*order_three(t_stack *s);
 
 int			verify_argv(char **argv);
 int			verify_lst_is_sorted(t_stack *s);
